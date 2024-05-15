@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+     <!-- icon file-->
+     <link rel="stylesheet" href="assets/css/all.min.css">
+
+     <!-- Slider File -->
+     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+     
+     <!-- CSS file -->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+     <style>
+        :root{
+    --jost:'jost';
+    --lora:'lora';
+    --green:#448979;
+    --lightgreen:#49ae96;
+    --secblack:#3f3a4a;
+    --smalltxt:#45414f;
+}
+
+        ::selection{
+  background: rgba(187, 134, 252, 0.5);
+  color: #FFF;
+}
+
+.faq_tab{
+  width: 100%;
+  padding: 60px 30px;
+}
+
+
+.content input{
+  display: none;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 40%;
+  margin-right: 50px;
+}
+
+.content .list label{
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #a3a3a3;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  z-index: 10;
+  font-family: var(--lora);
+  padding: 12px 0px;
+}
+
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about,
+#people:checked ~ .list label.about{
+  color:#000;
+}
+
+.content .text-content{
+  width: 80%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content .text{
+  display: none;
+}
+
+.content .text .title{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.faq_tab .text p{
+  font-size: 17px;
+  font-family: var(--jost);
+  margin-bottom: 20px;
+  color: #6B6B6B;
+}
+
+.content .text-content .home{
+  display: block;
+}
+
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about,
+#people:checked ~ .text-content .people{
+  display: block;
+}
+
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home,
+#people:checked ~ .text-content .home{
+  display: none;
+}
+
+.text-content i{
+    color: black;
+    margin-right: 10px;
+}
+.text-content span{
+    color:#111111;
+    font-family: var(--jost);
+}
+.text-content .text div{
+    margin-bottom: 15px;
+}
+.Faq_bg{
+    background-color: #FBF8F6;
+}
+#team_subscribe{
+    background-color: #FBF8F6;
+}
+
+
+     </style>
+</head>
+<body>
+<!-- Loader start -->
+
+<div class="pre_loader">
+    <div class="loader"></div>
+</div>
+
+<!-- Loader end -->
+
+<a id="top_scroll"></a>
+
+    <!-- Header start -->
+
+    <header id="header" class="sticky">
+        <div class="container1 flex justify-between">
+            <div class="left_header flex">
+                <div class="logo_header">
+                    <a href=""><img src="assets/image/logo-boutique.png" alt=""></a>
+                </div>
+                <nav class="flex align-center justify-center">
+                    <ul class="main_menu flex ">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">Pages</a>
+                            <ul class="sub_menu">
+                                <li><a href="about.html" class="main_black">About Us</a></li>
+                                <li><a href="">About Us 2</a></li>
+                                <li><a href="Team.html">Our Team</a></li>
+                                <li><a href="Review.html">Hotel Review</a></li>
+                                <li><a href="Faq.html">FAQ</a></li>
+                                <li><a href="">Gallery</a></li>
+                                <li><a href="">Maintenance</a></li>
+                                <li><a href="">Coming Soon</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="RoomGrid.html">Rooms</a></li>
+                        <li><a href="Room_search.html">Reservation</a></li>
+                        <li><a href="Blog.html">Blog</a>
+                        </li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right_header flex align-center">
+                <div class="drop_header">
+                    <span>USD</span>
+                    <i class="fas fa-sort-down"></i>
+                    <ul class="right_drop">
+                        <li><a href="">EUR</a></li>
+                        <li><a href="">CHF</a></li>
+                    </ul>
+                </div>
+                <div class="header_login">
+                    Login
+                </div>
+                <div class="header_signup">
+                    Sign Up
+                </div>
+                <div class="header_btn">
+                    <a href="">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <section id="about_slider">
+        <p>FAQ</p>
+        <p>Frequently Asked Questions</p>
+    </section>
+
+    <section class="Faq_bg">
+        <div class="container">
+            <div class="faq_tab">
+                <div class="content">
+                    <input type="radio" name="slider" checked id="home">
+                    <input type="radio" name="slider" id="blog">
+                    <input type="radio" name="slider" id="help">
+                    <input type="radio" name="slider" id="code">
+                    <input type="radio" name="slider" id="about">
+                    <input type="radio" name="slider" id="people">
+        
+                    <div class="list">
+                        <label for="home" class="home">
+                            <span>Is there a swimming pool in the hotel?</span>
+                        </label>
+                        <label for="blog" class="blog">
+                            <span>Is a babysitting service available?</span>
+                        </label>
+                        <label for="help" class="help">
+                            <span>How do I get to the hotel from the airport?</span>
+                        </label>
+                        <label for="code" class="code">
+                            <span>Can I connect my laptop in the room?</span>
+                        </label>
+                        <label for="about" class="about">
+                            <span>Does the internet rate include breakfast?</span>
+                        </label>
+                        <label for="people" class="people">
+                            <span>How many people can stay in one room?</span>
+                        </label>
+                        <!-- <div class="slider"></div> -->
+                    </div>
+        
+                    <div class="text-content">
+                        <div class="home text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The modern practice of yoga as a form of exercise developed from medieva</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The book received some positive reviews. Krysta Gibson, reviewing the book for New Spirit Journal</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The critic and yoga teacher Matthew Remski compares historians of yoga</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>In Remski’s view, along comes “Goldberg with a dozen years of dogged research, a sleuthing style</span>
+                            </div>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.</p>
+                        </div>
+                        
+                        <div class="blog text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The modern practice of yoga as a form of exercise developed from medieva</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The book received some positive reviews. Krysta Gibson, reviewing the book for New Spirit Journal</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The critic and yoga teacher Matthew Remski compares historians of yoga</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>In Remski’s view, along comes “Goldberg with a dozen years of dogged research, a sleuthing style</span>
+                            </div>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.</p></div>
+                        
+                        <div class="help text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The modern practice of yoga as a form of exercise developed from medieva</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The book received some positive reviews. Krysta Gibson, reviewing the book for New Spirit Journal</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The critic and yoga teacher Matthew Remski compares historians of yoga</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>In Remski’s view, along comes “Goldberg with a dozen years of dogged research, a sleuthing style</span>
+                            </div>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.</p></div>
+                        
+                        <div class="code text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The modern practice of yoga as a form of exercise developed from medieva</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The book received some positive reviews. Krysta Gibson, reviewing the book for New Spirit Journal</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The critic and yoga teacher Matthew Remski compares historians of yoga</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>In Remski’s view, along comes “Goldberg with a dozen years of dogged research, a sleuthing style</span>
+                            </div>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.</p></div>
+                        
+                        <div class="about text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The modern practice of yoga as a form of exercise developed from medieva</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The book received some positive reviews. Krysta Gibson, reviewing the book for New Spirit Journal</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The critic and yoga teacher Matthew Remski compares historians of yoga</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>In Remski’s view, along comes “Goldberg with a dozen years of dogged research, a sleuthing style</span>
+                            </div>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.</p></div>
+                        
+                        <div class="people text">
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The modern practice of yoga as a form of exercise developed from medieva</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The book received some positive reviews. Krysta Gibson, reviewing the book for New Spirit Journal</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>The critic and yoga teacher Matthew Remski compares historians of yoga</span>
+                            </div>
+                            <div>
+                                <i class="far fa-dot-circle"></i>
+                                <span>In Remski’s view, along comes “Goldberg with a dozen years of dogged research, a sleuthing style</span>
+                            </div>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team_subscribe">
+        <div class="container">
+            <div class="sec_title">
+                Subscribe to our <br>newsletter
+            </div>
+            <div class="reno_contant">
+                Get updates for new classes and new products
+            </div>
+            <div class="right_news">
+                <form action="">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="submit" class="submit">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Main end -->
+
+        <!-- Footer Start -->
+        <footer id="footer">
+            <div class="container">
+                <div class="main_footer">
+                    <div class="logo_header">
+                        <a href=""><img src="assets/image/logo-boutique.png" alt=""></a>
+                    </div>
+                    <div class="footer2">
+                        <div class="f_head">
+                            Contact
+                        </div>
+                        <ul>
+                            <li>
+                                <span>T</span>
+                                : 1-634-567-34 
+                            </li>
+                            <li>
+                                <span>E</span>
+                                Book@Hotel.co
+                            </li>
+                            <li>
+                                <span>F</span>
+                                1-634-567-35
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer2">
+                        <div class="f_head">
+                            Hotel Address
+                        </div>
+                        <div class="f_address">
+                            Zen Steckenstra ße <br>43340 Zermatt
+                        </div>
+                        <div class="f_mapbtn">
+                            <a href="">Google map</a>
+                        </div>
+                    </div>
+                    <div class="footer2">
+                        <div class="f_logo">
+                            <img src="assets/image/footer-logo (1).png" alt="">
+                        </div>
+                        <div class="f_cards">
+                            <img src="assets/image/footer-cards.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="copyright">
+            <div class="container flex justify-between">
+                <div class="left_copy flex">
+                    <div class="copy_icon">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <p><a href="">Privacy Policy</a></p>
+                    <p><a href="">Contact</a></p>
+                </div>
+                <div class="right_copy">
+                    Copyright © 2024 GoodLayers. All Rights Reserved Design By Dhruvika Kachhadiya.
+                </div>
+            </div>
+        </div>
+    <!-- Footer End -->
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

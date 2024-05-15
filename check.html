@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check</title>
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="assets/css/check.css">
+</head>
+<body>
+
+    <section id="check-in">
+        <div class="container flex">
+            <div class="check-in">
+                <div class="checkin-head">
+                    Check In
+                </div>
+                <!-- <input type="date" class="check_date"> -->
+                <!-- <input type="hidden" name="datetimes"  > -->
+                <p id="startDate">Start Date: </p>
+            </div>
+            <div class="check-in">
+                <div class="checkin-head">
+                    Check Out
+                </div>
+                <!-- <input type="date" class="check_date"> -->
+                <!-- <input type="hidden" name="datetimes" > -->
+                <p id="endDate">End Date:</p>
+            </div>
+            <div class="check-in check_room">
+                <div class="checkin-head">
+                    Room
+                </div>
+                <div class="room_count flex justify-between">
+                    <span id="r_count">0</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="room_number flex close">
+                    <div class="counter">
+                        <span class="cnt_txt">Room</span>
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="text" value="0" readonly>
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                      </div>
+                </div>
+            </div>
+            <div class="check-in check_room">
+                <div class="checkin-head">
+                    Guests
+                </div>
+                <div class="room_count flex justify-between">
+                    <span>Adults : </span>
+                    <span id="re_count"> 0</span>
+                    <span>Children : </span>
+                    <span id="ree_count">0</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                
+
+
+                <div class="room_number guest_number flex close">
+                    <div class="counter">
+                        <span class="cnt_txt">Adults</span>
+                        <span class="down" onClick='decreaseAdu(event, this)'>-</span>
+                        <input type="text" value="0" readonly placeholder="Adults :">
+                        <span class="up" onClick='increaseAdu(event, this)'>+</span>
+                      </div>
+                    <div class="counter">
+                        <span class="cnt_txt">Children</span>
+                        <span class="down" onClick='decreaseChi(event, this)'>-</span>
+                        <input type="text" value="0" readonly placeholder="Children :">
+                        <span class="up" onClick='increaseChi(event, this)'>+</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chk_btn">
+                <button>Search</button>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+   
+
+
+
+
+
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!-- <script src="js/script.js"></script> -->
+
+
+
+<script>
+$(document).ready(function () {
+  $("#startDate, #endDate").daterangepicker(
+    {},
+    function (start, end, label) {
+      let startDate = start.format("YYYY-MM-DD").toString();
+      let endDate = end.format("YYYY-MM-DD").toString();
+
+      document.getElementById("startDate").innerHTML =
+        "Start date: " + startDate;
+      document.getElementById("endDate").innerHTML = "End date: " + endDate;
+      
+    }
+  );
+});
+
+
+function increaseCount(a, b) {
+  var input = b.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+  document.getElementById('r_count').innerHTML=value;
+}
+
+function decreaseCount(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10);
+    if (value > 1) {
+        value = isNaN(value) ? 0 : value;
+        value--;
+        input.value = value;
+        document.getElementById('r_count').innerHTML=value;
+    }
+}
+
+
+function increaseAdu(a, b) {
+    var input = b.previousElementSibling;
+    var value = parseInt(input.value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    input.value = value;
+    document.getElementById('re_count').innerHTML=value;
+}
+
+function decreaseAdu(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10);
+    if (value > 0) {
+        value = isNaN(value) ? 0 : value;
+        value--;
+        input.value = value;
+        document.getElementById('re_count').innerHTML=value;
+    }
+}
+function increaseChi(a, b) {
+    var input = b.previousElementSibling;
+    var value = parseInt(input.value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    input.value = value;
+    document.getElementById('ree_count').innerHTML=value;
+}
+
+function decreaseChi(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10);
+    if (value > 0) {
+        value = isNaN(value) ? 0 : value;
+        value--;
+        input.value = value;
+        document.getElementById('ree_count').innerHTML=value;
+    }
+}
+$('.check_room').click(function(){
+    $('.room_number').toggleClass('open close');
+
+})
+
+</script>
+</body>
+</html>
